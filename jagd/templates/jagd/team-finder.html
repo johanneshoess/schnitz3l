@@ -1,0 +1,20 @@
+{% extends 'jagd/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Gib deinen Team namen ein{% endblock %}
+
+{% block content %}
+
+<div class="window">
+  Der name sollte absolut richtig geschrieben sein!
+</div>
+
+<form method="post" enctype="multipart/form-data" class="team_form">
+        {% csrf_token %}
+        <div class="div-block-25">
+          {{ form.name|as_crispy_field }}
+        </div>
+        <button type="submit" class="btn_config_form btn w-button">starten</button>
+    </form>
+
+{% endblock %}

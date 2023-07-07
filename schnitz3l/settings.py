@@ -50,22 +50,30 @@ if DEBUG == 'True':
          '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
     """
     print(p)
+    ALLOWED_HOSTS = []
 else:
     print("started in Production Mode")
-
-ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ['nebukat.uber.space']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jagd.apps.JagdConfig',
+    'n3bu.apps.N3buConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'crispy_bootstrap4'
 ]
+
+# Crispy Forms Template
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

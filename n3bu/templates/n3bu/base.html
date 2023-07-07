@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>n3bu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta content="n3bu" property="og:title" />
+    <meta name="description" content="Wo ist das v3gane schnitzel?" />
+    <link rel="icon" href="{% static 'images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'n3bu/style.css' %}">
+  </head>
+  <body>
+
+
+      {% block content %}
+      <!-- content... -->
+      {% endblock %}
+
+      <footer>
+        <small><script>document.write(new Date().getFullYear())</script>, n3bu</small>
+      </footer>
+  </body>
+</html>

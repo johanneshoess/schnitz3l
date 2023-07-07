@@ -77,7 +77,8 @@ In debug mode errors will be displayed in the application which could lead to se
 This can be `SQLite` (created by django on migrate) or `Postgres` if existent. In case of Postgres you need to provide database name, credentials, host and port.
 
 ## Architecture overview
-... to be written
+
+Bzgl der Chain Liste: eine Tabelle mit Quest, Team, Quest-Nr würde wohl gehn. sagt michele und da hat er wohl recht. 
 
 ## Code documentation
 ... to be written
