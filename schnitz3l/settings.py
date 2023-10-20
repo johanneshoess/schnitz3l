@@ -54,6 +54,7 @@ if DEBUG == 'True':
 else:
     print("started in Production Mode")
     ALLOWED_HOSTS = ['nebukat.uber.space']
+    STATIC_ROOT = '/home/nebukat/html/static'
 
 
 # Application definition
