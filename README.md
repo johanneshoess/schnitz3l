@@ -2,6 +2,7 @@
 In Haft , da jagen wir vegane schnitz3l
 
 ## Table of Contents
+  - [Running in Production](#running-in-production)
   - [Running the app locally](#running-the-app-locally)
     - [Prerequisites](#prerequisites)
     - [Start virtual environment](#start-virtual-environment)
@@ -11,6 +12,10 @@ In Haft , da jagen wir vegane schnitz3l
   - [The `.env` File](#the-env-file)
   - [Architecture overview](#architecture-overview)
   - [Code documentation](#code-documentation)
+
+## Running in Production
+Follow this Guide: https://lab.uberspace.de/guide_django/
+using `python3.11` and `pip3.11`
 
 ## Running the app locally
 
