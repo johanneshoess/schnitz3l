@@ -55,10 +55,10 @@ else:
     print("started in Production Mode")
     CSRF_TRUSTED_ORIGINS = [
         'http://nebukat.uber.space'
-    ],
+    ]
     ALLOWED_HOSTS = [
         'nebukat.uber.space',
-    ],
+    ]
     CORS_ORIGIN_WHITELIST = [
         'http://nebukat.uber.space',
     ]
