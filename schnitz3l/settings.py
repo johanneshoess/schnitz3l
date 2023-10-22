@@ -53,7 +53,15 @@ if DEBUG == 'True':
     ALLOWED_HOSTS = []
 else:
     print("started in Production Mode")
-    ALLOWED_HOSTS = ['nebukat.uber.space']
+    CSRF_TRUSTED_ORIGINS = [
+        'http://nebukat.uber.space'
+    ],
+    ALLOWED_HOSTS = [
+        'nebukat.uber.space',
+    ],
+    CORS_ORIGIN_WHITELIST = [
+        'http://nebukat.uber.space',
+    ]
     STATIC_ROOT = '/home/nebukat/html/static'
 
 
