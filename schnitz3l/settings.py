@@ -137,8 +137,8 @@ if DATABASE == 'Postgres':
             'NAME': name,
             'USER': username,
             'PASSWORD': password,
-            'HOST': 'localhost',
-            'PORT': '',
+            'HOST': host,
+            'PORT': port,
         }
     }
 elif DATABASE == 'SQLite':
