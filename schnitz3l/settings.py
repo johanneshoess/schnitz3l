@@ -32,9 +32,12 @@ else:
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG")
+if os.getenv("DEBUG") == 'True':
+    DEBUG = True
+else:
+    DEBUG = False
 
-if DEBUG == 'True':
+if DEBUG:
     print('###########   in DEBUG mode   ##########')
     p = """
          .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
