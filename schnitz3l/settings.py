@@ -65,7 +65,7 @@ else:
     CORS_ORIGIN_WHITELIST = [
         'https://nebukat.uber.space',
     ]
-    STATIC_ROOT = '/home/nebukat/html/static'
+    STATIC_ROOT = os.getenv('STATIC_ROOT')
 
 
 # Application definition
@@ -207,7 +207,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # location for uploading side view photos, images uploaded in admin gui also go to input_files/media
-
+"""
 if not os.path.exists(os.path.join(BASE_DIR.parent, "input_files")):
     os.mkdir(os.path.join(BASE_DIR.parent, "input_files"))
 MEDIA_ROOT = os.path.join(BASE_DIR.parent, "input_files")
@@ -215,3 +215,4 @@ MEDIA_URL = MEDIA_ROOT + "/"
 if not os.path.exists(MEDIA_ROOT):
     os.mkdir(MEDIA_ROOT)
 INPUT_FILE_LOCATION = "media"
+"""
