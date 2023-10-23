@@ -148,7 +148,15 @@ elif DATABASE == 'SQLite':
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-
+elif DATABASE == 'mariaDB':
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.mysql",
+            "OPTIONS": {
+                "read_default_file": "~/.my.cnf",
+            },
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
