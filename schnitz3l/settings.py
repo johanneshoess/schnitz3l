@@ -149,12 +149,19 @@ elif DATABASE == 'SQLite':
         }
     }
 elif DATABASE == 'mariaDB':
+    name = os.getenv("DATABASE_NAME")
+    username = os.getenv("DATABASE_USERNAME")
+    password = os.getenv("DATABASE_PASSWORD")
+    host = os.getenv("DATABASE_HOST")
+    port = os.getenv("DATABASE_PORT")
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.mysql",
-            "OPTIONS": {
-                "read_default_file": "~/.my.cnf",
-            },
+            'NAME': name,
+            'USER': username,
+            'PASSWORD': password,
+            'HOST': host,
+            'PORT': port,
         }
     }
 
