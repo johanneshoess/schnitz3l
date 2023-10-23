@@ -70,6 +70,7 @@ else:
 INSTALLED_APPS = [
     'jagd.apps.JagdConfig',
     'n3bu.apps.N3buConfig',
+    'vtanz.apps.VtanzConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

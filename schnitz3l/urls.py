@@ -21,5 +21,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('jagd', include('jagd.urls')),
+    path('vtanz', include('vtanz.urls')),
     path('', include('n3bu.urls'))
 ]
