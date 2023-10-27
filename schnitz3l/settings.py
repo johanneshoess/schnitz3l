@@ -54,7 +54,7 @@ if DEBUG:
          '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
     """
     print(p)
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ['nebukat.uber.space']
     STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 else:
     print("started in Production Mode")
