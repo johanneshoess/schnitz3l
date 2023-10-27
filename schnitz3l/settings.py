@@ -30,6 +30,7 @@ if not SECRET_KEY:
 else:
     print("Your Django Secret Key was added")
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.getenv("DEBUG") == 'True':
@@ -54,6 +55,7 @@ if DEBUG:
     """
     print(p)
     ALLOWED_HOSTS = []
+    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 else:
     print("started in Production Mode")
     CSRF_TRUSTED_ORIGINS = [
@@ -215,3 +217,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "upload")
 MEDIA_URL = MEDIA_ROOT + "/"
 if not os.path.exists(MEDIA_ROOT):
     os.mkdir(MEDIA_ROOT)
+
