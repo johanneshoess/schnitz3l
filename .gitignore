@@ -163,7 +163,7 @@ cython_debug/
 .idea/**/dictionaries
 .idea/**/shelf
 
-upload/
+
 
 # AWS User-specific
 .idea/**/aws.xml
