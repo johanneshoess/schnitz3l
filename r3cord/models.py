@@ -14,5 +14,5 @@ class Record(models.Model):
         max_length=3,
         choices=direction.choices,
         default=direction.IN)
-    note = models.TextField()
-    image = models.ImageField(upload_to="r3cord/%Y/%m/%d/")
+    note = models.TextField(blank=True)
+    image = models.ImageField(upload_to="r3cord/%Y/%m/%d/", blank=True)
