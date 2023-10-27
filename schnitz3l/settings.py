@@ -74,6 +74,7 @@ INSTALLED_APPS = [
     'jagd.apps.JagdConfig',
     'n3bu.apps.N3buConfig',
     'vtanz.apps.VtanzConfig',
+    'r3cord.apps.R3CordConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -206,13 +207,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# location for uploading side view photos, images uploaded in admin gui also go to input_files/media
-"""
-if not os.path.exists(os.path.join(BASE_DIR.parent, "input_files")):
-    os.mkdir(os.path.join(BASE_DIR.parent, "input_files"))
-MEDIA_ROOT = os.path.join(BASE_DIR.parent, "input_files")
+# location for uploading side view photos, images uploaded in admin gui also go to upload/media
+
+if not os.path.exists(os.path.join(BASE_DIR, "upload")):
+    os.mkdir(os.path.join(BASE_DIR, "upload"))
+MEDIA_ROOT = os.path.join(BASE_DIR, "upload")
 MEDIA_URL = MEDIA_ROOT + "/"
 if not os.path.exists(MEDIA_ROOT):
     os.mkdir(MEDIA_ROOT)
-INPUT_FILE_LOCATION = "media"
-"""
