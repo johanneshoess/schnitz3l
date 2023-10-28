@@ -227,6 +227,7 @@ MEDIA_ROOT = os.getenv("MEDIA_ROOT")
 
 folder = os.path.join(MEDIA_UPLOAD, MEDIA_ROOT)
 upload = os.path.join( BASE_DIR.parent, folder)
+print('media-root', MEDIA_ROOT)
 print('folder',folder)
 print('upload',upload)
 
