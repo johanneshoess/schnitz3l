@@ -16,7 +16,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+print('BASE_DIR', BASE_DIR.parent)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -222,10 +222,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # TODO wie lade ich die files direkt in den STATIC ordner und geht das überhautpt?
 
-if not os.path.exists(os.path.join(BASE_DIR, "upload")):
-    os.mkdir(os.path.join(BASE_DIR, "upload"))
-MEDIA_ROOT = os.path.join(BASE_DIR, "upload")
+if not os.path.exists(os.path.join( BASE_DIR.parent, "html/static/input_files")):
+    os.mkdir(os.path.join(BASE_DIR.parent, "html/static/input_files"))
+MEDIA_ROOT = os.path.join(BASE_DIR.parent, "html/static/input_files")
 MEDIA_URL = MEDIA_ROOT + "/"
 if not os.path.exists(MEDIA_ROOT):
     os.mkdir(MEDIA_ROOT)
-
+INPUT_FILE_LOCATION = "media"
