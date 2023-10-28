@@ -1,11 +1,12 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.conf import settings
 
 
 class Record(models.Model):
     class direction(models.TextChoices):
         IN = 'IN', _('went inside')
-        OUT =  'OUT', _('came outside')
+        OUT = 'OUT', _('came outside')
 
     creation_date = models.DateTimeField(auto_now_add=True)
     time = models.DateTimeField()
@@ -15,4 +16,4 @@ class Record(models.Model):
         choices=direction.choices,
         default=direction.IN)
     note = models.TextField(blank=True)
-    image = models.ImageField(upload_to="r3cord/%Y/%m/%d/", blank=True)
+    image = models.ImageField(upload_to=settings.INPUT_FILE_LOCATION, blank=True)
