@@ -16,4 +16,4 @@ class Record(models.Model):
         choices=direction.choices,
         default=direction.IN)
     note = models.TextField(blank=True)
-    image = models.ImageField(upload_to=settings.INPUT_FILE_LOCATION, blank=True)
+    image = models.ImageField(blank=True)
