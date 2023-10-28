@@ -232,8 +232,7 @@ print('upload',upload)
 
 if not os.path.exists(upload):
     os.mkdir(upload)
-MEDIA_ROOT = upload
-MEDIA_URL = MEDIA_UPLOAD + '/'
+MEDIA_URL = MEDIA_ROOT + '/'
 if not os.path.exists(MEDIA_ROOT):
     os.mkdir(MEDIA_ROOT)
 INPUT_FILE_LOCATION = "media"
