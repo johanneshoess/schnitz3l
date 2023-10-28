@@ -220,11 +220,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # location for uploading side view photos, images uploaded in admin gui also go to upload/media
 
+MEDIA_UPLOAD = os.getenv("MEDIA_UPLOAD")
+
 # TODO wie lade ich die files direkt in den STATIC ordner und geht das überhautpt?
 
-if not os.path.exists(os.path.join( BASE_DIR.parent, "html/static/input_files")):
-    os.mkdir(os.path.join(BASE_DIR.parent, "html/static/input_files"))
-MEDIA_ROOT = os.path.join(BASE_DIR.parent, "html/static/input_files")
+if not os.path.exists(os.path.join( BASE_DIR.parent, MEDIA_UPLOAD)):
+    os.mkdir(os.path.join(BASE_DIR.parent, MEDIA_UPLOAD))
+MEDIA_ROOT = os.path.join(BASE_DIR.parent, MEDIA_UPLOAD)
 MEDIA_URL = MEDIA_ROOT + "/"
 if not os.path.exists(MEDIA_ROOT):
     os.mkdir(MEDIA_ROOT)
