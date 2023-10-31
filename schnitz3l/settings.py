@@ -220,6 +220,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # location for uploading side view photos, images uploaded in admin gui also go to upload/media
 
+STATIC_DIR = BASE_DIR / 'static'
+MEDIA_DIR = BASE_DIR / 'media'
+MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
-# Path where media is stored
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
