@@ -25,4 +25,4 @@ urlpatterns = [
     path('jagd', include('jagd.urls')),
     path('vtanz', include('vtanz.urls')),
     path('', include('n3bu.urls'))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
