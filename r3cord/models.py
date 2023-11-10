@@ -16,4 +16,4 @@ class Record(models.Model):
         choices=direction.choices,
         default=direction.IN)
     note = models.TextField(blank=True)
-    image = models.ImageField(blank=True, upload_to='r3cord/% Y/% m/') #upload_to ='uploads/% Y/% m/% d/'
+    image = models.ImageField(blank=True, upload_to='r3cord/%Y/%m/') #upload_to ='uploads/% Y/% m/% d/'
