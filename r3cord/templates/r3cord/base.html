@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>r3cord</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta content="schnitz3ljagd" property="og:title" />
+    <meta name="description" content="Messen und Dokumentieren" />
+    <link rel="icon" href="{% static 'images/r3cord/favicon.png' %}">
+    <!-- spaeter dann lokal -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'r3cord/style.css' %}">
+  </head>
+  <body>
+    <div id="content">
+
+    <h1>{% block title %} <!-- title... --> {% endblock %}</h1>
+
+
+      {% block content %}
+      <!-- content... -->
+      {% endblock %}
+
+      <footer>
+        <small><script>document.write(new Date().getFullYear())</script>, n3bu</small>
+      </footer>
+    </div>
+  </body>
+</html>
