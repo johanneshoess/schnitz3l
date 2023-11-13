@@ -1,0 +1,52 @@
+#header-logo {
+    width: 50%;
+    padding: 0 30px 30px 30px;
+}
+
+
+.wallpaper {
+    background-image: url('../images/fotos/panorama.jpeg');
+    background-size: cover;
+}
+
+.image {
+    width: 100%;
+}
+
+.column {
+    margin-top: 25px;
+}
+
+.height-500 {
+    height: 500px;
+}
+
+.height-300 {
+    height: 300px;
+}
+
+.height-full {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+.align-center {
+    text-align: center;
+}
+
+/*footer*/
+
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    color: black;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}

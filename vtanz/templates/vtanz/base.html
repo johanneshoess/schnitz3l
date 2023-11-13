@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="de">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Volkstanzgruppe</title>
+  <meta name="description" content="Tanz, Brauchtum, Ottersweier, Tratition">
+  <meta name="author" content="jo">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="{% static 'vtanz/css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'vtanz/css/skeleton.css' %}">
+  <link rel="stylesheet" href="{% static 'vtanz/css/style.css' %}">
+  <link rel="icon" type="{% static 'vtanz/images/favicon.png' %}">
+
+</head>
+<body>
+
+  {% block content %}
+  <!-- content... -->
+  {% endblock %}
+
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="column footer">
+        <p><a href="impressum.html">impressum</a> | <a href="datenschutz.html">datenschutz</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
