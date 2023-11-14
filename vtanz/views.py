@@ -16,12 +16,13 @@ def IndexView(request):
 
 
 
-#class IndexView(generic.TemplateView):
-    """
-    View for information, startpoint
-    """
-    # article_list
+class DatenschutzView(generic.TemplateView):
 
-    #template_name = 'vtanz/index.html'
+    template_name = 'vtanz/datenschutz.html'
+
+
+class ImpressumView(generic.TemplateView):
+
+    template_name = 'vtanz/impressum.html'
 
 

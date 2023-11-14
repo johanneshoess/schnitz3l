@@ -24,10 +24,13 @@
   <link rel="stylesheet" href="{% static 'vtanz/css/normalize.css' %}">
   <link rel="stylesheet" href="{% static 'vtanz/css/skeleton.css' %}">
   <link rel="stylesheet" href="{% static 'vtanz/css/style.css' %}">
-  <link rel="icon" type="{% static 'vtanz/images/favicon.png' %}">
+  <link rel="shortcut icon" type="image/png" href="{% static 'vtanz/images/favicon.png' %}">
 
 </head>
 <body>
+  <div class="container">
+    <a href="/vtanz"><img id="header-logo" src="{% static 'vtanz/images/logo_vt.jpg' %}" alt="Volkstanzgruppe Ottersweier"></a>
+  </div>
 
   {% block content %}
   <!-- content... -->
@@ -37,7 +40,7 @@
   <div class="container">
     <div class="row">
       <div class="column footer">
-        <p><a href="impressum.html">impressum</a> | <a href="datenschutz.html">datenschutz</a></p>
+        <p><a href="{% url 'impressum' %}">impressum</a> | <a href="{% url 'datenschutz' %}">datenschutz</a></p>
       </div>
     </div>
   </div>

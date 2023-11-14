@@ -2,9 +2,7 @@
 {% load static %}
 {% block content %}
 
-<div class="container">
-    <img id="header-logo" src="{% static 'vtanz/images/logo_vt.jpg' %}" alt="Volkstanzgruppe Ottersweier">
-  </div>
+
   <div class="container">
     <div class="row">
       <div class="column">
@@ -16,10 +14,9 @@
   <div class="container">
     <div class="row">
       <div class="column u-max-full-width align-center">
-        <a href="#aktuelles" class="button">Termine</a>
-        <a href="#wihenne" class="button">Wihenne</a>
-        <a href="#aktuelles" class="button">Aktuelles</a>
-        <a href="#generalversammlung" class="button">Bericht Generalversammlung</a>
+        {% for article in article_list %}
+          <a href="#{{article.article_id}}" class="button">{{article.article_id}}</a>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -31,18 +28,17 @@
   {% endfor %}
   <!-- Blockende -->
 
-      <div class="row">
-        <div class="column">
-          <h5>Unsere Musiker sind unverzichtbar!</h5>
-          <img class="image" src="{% static 'vtanz/images/musik.jpg' %}">
-          <p>... immer gut drauf, geben sie den Takt an!</p>
-        </div>
+    <div class="row">
+      <div class="column">
+        <h5>Unsere Musiker sind unverzichtbar!</h5>
+        <img class="image" src="{% static 'vtanz/images/musik.jpg' %}">
+        <p>... immer gut drauf, geben sie den Takt an!</p>
       </div>
-      <div class="row">
-        <div class="column">
-          <h5>Kontakt</h5>
-          <p>info(@)vt-ottersweier.de</p>
-        </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h5>Kontakt</h5>
+        <p>info(@)vt-ottersweier.de</p>
       </div>
     </div>
 

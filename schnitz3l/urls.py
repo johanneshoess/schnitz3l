@@ -24,7 +24,7 @@ from django.views.static import serve
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('jagd', include('jagd.urls')),
-    path('vtanz', include('vtanz.urls')),
+    path('vtanz/', include('vtanz.urls'), name="vtanz"),
     path('r3cord', include('r3cord.urls')),
     path('', include('n3bu.urls'))
 ]
