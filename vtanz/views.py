@@ -11,7 +11,11 @@ def IndexView(request):
         image_alt="Ein Hase ist zu sehen"
     )
     #article_list = [article,]
-    article_list = Article.objects.all()  # Fetch all articles
+    article_list = Article.objects.all()
+    pos = 0
+    for article in article_list:
+        article.pos = 'right' if pos % 2 else 'left'
+        pos += 1
     return render(request, 'vtanz/index.html', {'article_list': article_list})
 
 
