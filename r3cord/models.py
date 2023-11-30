@@ -20,4 +20,4 @@ class Record(models.Model):
 
 
     def __str__(self):
-        return "{time} - {direction} - {amount}".format(time = self.time.strftime("%m/%d/%Y, %H:%M"), direction=self.direction, amount=self.amount_in_ml)
+        return "{time} - {direction} - {amount}".format(time = self.time.strftime("%d.%m.%Y, %H:%M"), direction=self.direction, amount=self.amount_in_ml)
