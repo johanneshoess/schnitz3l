@@ -17,3 +17,7 @@ class Record(models.Model):
         default=direction.IN)
     note = models.TextField(blank=True)
     image = models.ImageField(blank=True, upload_to='r3cord/%Y/%m/') #upload_to ='uploads/% Y/% m/% d/'
+
+
+    def __str__(self):
+        return "{time} - {direction} - {amount}".format(time = self.time.strftime("%m/%d/%Y, %H:%M"), direction=self.direction, amount=self.amount_in_ml)
