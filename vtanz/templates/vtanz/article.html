@@ -1,25 +1,22 @@
 {% load static %}
-
+<div id="{{article.article_id}}" class="row">
 {% if article.pos == 'left' %}
-    <div class="row">
       <div class="column one-half">
         <img class="image" src="{{ MEDIA_URL }}{{ article.image.url }}" alt="{{article.image_alt}}">
         <p>{{article.image_alt}}</p>
       </div>
       <div class="column one-half">
-        <h5 id="{{article.article_id}}">{{article.headline}}</h5>
+        <h5>{{article.headline}}</h5>
         <p>{{article.text}}</p>
       </div>
-    </div>
 {% else %}
-    <div class="row">
       <div class="column one-half">
-        <h5 id="{{article.article_id}}">{{article.headline}}</h5>
+        <h5>{{article.headline}}</h5>
         <p>{{article.text}}</p>
       </div>
       <div class="column one-half">
         <img class="image" src="{{ MEDIA_URL }}{{ article.image.url }}" alt="{{article.image_alt}}">
         <p>{{article.image_alt}}</p>
       </div>
-    </div>
 {% endif %}
+</div>

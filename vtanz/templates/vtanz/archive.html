@@ -1,0 +1,37 @@
+{% extends 'vtanz/base.html' %}
+{% load static %}
+{% block content %}
+
+
+  <div class="container">
+    <div class="row">
+      <h2>Archiv</h2>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="column u-max-full-width align-center">
+        {% for article in article_list %}
+          <a href="#{{article.article_id}}" class="button">{{article.article_id}}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="container">
+
+  <!-- Artikel -->
+  {% for article in article_list %}
+    {% include "vtanz/article.html" %}
+  {% endfor %}
+  <!-- Blockende -->
+
+
+    <div class="row">
+      <div class="column">
+        <h5>Kontakt</h5>
+        <p>info(@)vt-ottersweier.de</p>
+      </div>
+    </div>
+
+
+{% endblock %}

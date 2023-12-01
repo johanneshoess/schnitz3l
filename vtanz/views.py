@@ -4,20 +4,21 @@ from django.shortcuts import render
 
 
 def IndexView(request):
-    article = Article(
-        headline="Hase ist entlaufen",
-        article_id="hase",
-        text="Der Hase ist weg, was sollen wir tun? Ich weiß es doch auch nicht. Es ist alles vorbei.",
-        image_alt="Ein Hase ist zu sehen"
-    )
-    #article_list = [article,]
-    article_list = Article.objects.all()
+    article_list = Article.objects.filter(archived=False)
     pos = 0
     for article in article_list:
         article.pos = 'right' if pos % 2 else 'left'
         pos += 1
     return render(request, 'vtanz/index.html', {'article_list': article_list})
 
+
+def ArchiveView(request):
+    article_list = Article.objects.filter(archived=True)
+    pos = 0
+    for article in article_list:
+        article.pos = 'right' if pos % 2 else 'left'
+        pos += 1
+    return render(request, 'vtanz/archive.html', {'article_list': article_list})
 
 
 class DatenschutzView(generic.TemplateView):
