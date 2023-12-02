@@ -9,5 +9,6 @@ class ArticleAdmin(admin.ModelAdmin):
         models.TextField: {'widget': AdminPagedownWidget},
     }
 
+
 # Register your models here.
-admin.site.register(Article)
+admin.site.register(Article, ArticleAdmin)
