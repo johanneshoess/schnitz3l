@@ -77,7 +77,7 @@ else:
     print("started in Production Mode")
     CSRF_TRUSTED_ORIGINS = [
         'https://nebukat.uber.space',
-        'https://n3bu.lol'
+        'https://www.n3bu.lol'
     ]
     ALLOWED_HOSTS = [
         'nebukat.uber.space',
@@ -85,7 +85,7 @@ else:
     ]
     CORS_ORIGIN_WHITELIST = [
         'https://nebukat.uber.space',
-        'https://n3bu.lol'
+        'https://www.n3bu.lol'
     ]
     STATIC_ROOT = os.getenv('STATIC_ROOT')
 
