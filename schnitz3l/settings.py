@@ -81,7 +81,8 @@ else:
     ]
     ALLOWED_HOSTS = [
         'nebukat.uber.space',
-        'www.n3bu.lol'
+        'www.n3bu.lol',
+        'n3bu.lol'
     ]
     CORS_ORIGIN_WHITELIST = [
         'https://nebukat.uber.space',
