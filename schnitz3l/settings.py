@@ -55,25 +55,37 @@ if DEBUG:
     """
     print(p)
     CSRF_TRUSTED_ORIGINS = [
-        'https://nebukat.uber.space', 'http://127.0.0.1:8000', 'http://localhost:8000'
+        'https://nebukat.uber.space',
+        'http://127.0.0.1:8000',
+        'http://localhost:8000',
+        'https://n3bu.lol'
     ]
     ALLOWED_HOSTS = [
-        'nebukat.uber.space', '127.0.0.1', 'localhost'
+        'nebukat.uber.space',
+        '127.0.0.1',
+        'localhost',
+        'n3bu.lol'
     ]
     CORS_ORIGIN_WHITELIST = [
-        'https://nebukat.uber.space', '127.0.0.1:8000', 'localhost:8000'
+        'https://nebukat.uber.space',
+        '127.0.0.1:8000',
+        'localhost:8000',
+        'https://n3bu.lol'
     ]
     STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 else:
     print("started in Production Mode")
     CSRF_TRUSTED_ORIGINS = [
-        'https://nebukat.uber.space'
+        'https://nebukat.uber.space',
+        'https://n3bu.lol'
     ]
     ALLOWED_HOSTS = [
         'nebukat.uber.space',
+        'n3bu.lol'
     ]
     CORS_ORIGIN_WHITELIST = [
         'https://nebukat.uber.space',
+        'https://n3bu.lol'
     ]
     STATIC_ROOT = os.getenv('STATIC_ROOT')
 
